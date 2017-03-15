@@ -1,82 +1,89 @@
-import React, { PropTypes } from "react"
+import React, { Component } from "react"
 import { Link } from "phenomic"
 import Svg from "react-svg-inline"
-
-import twitterSvg from "../icons/iconmonstr-twitter-1.svg"
-import gitHubSvg from "../icons/iconmonstr-github-1.svg"
-
+import hamburgerSvg from "../icons/iconmonstr-menu-1.svg"
 import styles from "./index.css"
 
-const Header = (props, { metadata: { pkg } }) => (
-  <header className={ styles.header }>
-    <nav className={ styles.nav }>
-      <span className={styles.logoText}>Trailer Leasing, LLC</span>
-      <div className={ styles.navPart1 }>
-        <Link
-          className={ styles.link }
-          to={ "/" }
-        >
-          { "Home" }
-        </Link>
-        <Link
-          className={ styles.link }
-          to={ "/about" }
-        >
-          { "About" }
-        </Link>
-        <Link
-          className={ styles.link }
-          to={ "/application" }
-        >
-          { "Application" }
-        </Link>
-        <Link
-          className={ styles.link }
-          to={ "/pay-online" }
-        >
-          { "Pay Online" }
-        </Link>
-        <Link
-          className={ styles.link }
-          to={ "/leasing-terms" }
-        >
-          { "Leasing Terms" }
-        </Link>
-        <Link
-          className={ styles.link }
-          to={ "/contact-us" }
-        >
-          { "Contact Us" }
-        </Link>
-      </div>
-      <div className={ styles.navPart2 }>
-        {
-          pkg.twitter &&
-          <a
-            href={ `https://twitter.com/${pkg.twitter}` }
-            className={ styles.link }
-          >
-            <Svg svg={ twitterSvg } cleanup />
-            { "Twitter" }
-          </a>
-        }
-        {
-          pkg.repository &&
-          <a
-            href={ pkg.repository }
-            className={ styles.link }
-          >
-            <Svg svg={ gitHubSvg } cleanup />
-            { "GitHub" }
-          </a>
-        }
-      </div>
-    </nav>
-  </header>
-)
+export default class Header extends Component {
+  constructor() {
+    super()
 
-Header.contextTypes = {
-  metadata: PropTypes.object.isRequired,
+    this.state = { navShown: false }
+    this._toggleResponsiveNav = this._toggleResponsiveNav.bind(this)
+    this._resetRespNav = this._resetRespNav.bind(this)
+  }
+
+  _toggleResponsiveNav() {
+    this.setState({navShown: !this.state.navShown})
+  }
+
+  _resetRespNav(){
+    this.setState({navShown: false})
+  }
+
+  render() {
+    var respNavClass = this.state.navShown ? (styles.navPart1 + ' ' + styles.navShown) : styles.navPart1
+
+    return (
+      <header className={styles.header}>
+        <nav className={styles.nav}>
+          <span className={styles.logoText}>Trailer Leasing, LLC</span>
+          <div className={respNavClass}>
+            <span onClick={this._toggleResponsiveNav}
+                  className={styles.closebtn}>
+              &times;
+            </span>
+
+            <Link
+              onClick={this._resetRespNav}
+              className={ styles.link }
+              to={ "/" }
+            >
+              { "Home" }
+            </Link>
+            <Link
+              onClick={this._resetRespNav}
+              className={ styles.link }
+              to={ "/about" }
+            >
+              { "About" }
+            </Link>
+            <Link
+              onClick={this._resetRespNav}
+              className={ styles.link }
+              to={ "/application" }
+            >
+              { "Application" }
+            </Link>
+            <Link
+              onClick={this._resetRespNav}
+              className={ styles.link }
+              to={ "/pay-online" }
+            >
+              { "Pay Online" }
+            </Link>
+            <Link
+              onClick={this._resetRespNav}
+              className={ styles.link }
+              to={ "/leasing-terms" }
+            >
+              { "Leasing Terms" }
+            </Link>
+            <Link
+              onClick={this._resetRespNav}
+              className={ styles.link }
+              to={ "/contact-us" }
+            >
+              { "Contact Us" }
+            </Link>
+          </div>
+
+          <Svg className={styles.hamburger}
+               onClick={this._toggleResponsiveNav}
+               svg={ hamburgerSvg }
+               cleanup />
+        </nav>
+      </header>
+    )
+  }
 }
-
-export default Header

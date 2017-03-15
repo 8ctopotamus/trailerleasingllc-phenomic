@@ -29,8 +29,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-.navPart1,
-.navPart2 {
+.navPart1 {
   display: flex;
   flex-direction: row;
 }
@@ -60,4 +59,73 @@
   width: 14px;
   height: 14px;
   vertical-align: middle;
+}
+
+.closebtn {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  opacity: 0.6;
+  transition: 0.4s all;
+  fill: currentColor;
+  width: 14px;
+  height: 14px;
+
+  &:hover,
+  &:focus {
+    color: inherit;
+    opacity: 1;
+    border-bottom-color: var(--colorNeutralLight);
+  }
+}
+
+@media (max-width: 830px) {
+  .nav { padding: 0 0.75rem; }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navPart1 {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 0; /* init on 0, change to 100% with js */
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    background: var(--colorPrimaryDark);
+    padding: 60px 0;
+    z-index: 1;
+    transition: 0.5;
+  }
+
+  .navShown {
+    width: 100%;
+  }
+
+  .link {
+    display: block;
+    text-align: center;
+    transition: 0.3;
+    border-bottom: none;
+    font-size: 1.3em;
+  }
+
+  .closebtn {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
 }
