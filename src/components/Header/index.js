@@ -27,7 +27,11 @@ export default class Header extends Component {
     return (
       <header className={styles.header}>
         <nav className={styles.nav}>
-          <span className={styles.logoText}>Trailer Leasing, LLC</span>
+          <Link className={styles.logoText}
+                to={ "/" }>
+            {'Trailer Leasing, LLC'}
+          </Link>
+
           <div className={respNavClass}>
             <span onClick={this._toggleResponsiveNav}
                   className={styles.closebtn}>

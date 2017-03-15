@@ -94,3 +94,23 @@ hr {
   float: right;
   margin: 0 0 12px 12px;
 }
+
+.button-content {
+  display: inline-flex;
+  padding: 0 1rem;
+  line-height: 2rem;
+  font-weight: 100;
+  text-align: center;
+  border-radius: 3px;
+  transition: .2s all;
+  color: var(--colorPrimary);
+  border: 1px solid var(--colorPrimary);
+  border-bottom: 1px solid var(--colorPrimary) !important;
+  background: color(var(--colorNeutralLight) a(0.2));
+
+  &:hover {
+    text-decoration: none;
+    color: var(--colorPrimaryDark);
+    border: 1px solid var(--colorPrimaryDark);
+  }
+}
