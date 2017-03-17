@@ -1,14 +1,11 @@
 ---
 title: Pay Online
 hero: ../assets/header.png  
-cta:
-  label: Make a Payment
-  link: "https://www.paymentservicenetwork.com/Login.aspx?acc=RT22574"
-  props:
-    big: true
 ---
 
 <img class="floatRight" src="../assets/psn-pay-by-card-1.jpg" alt="PSN pay by card" />
+
+<a class="button-content" href="https://www.paymentservicenetwork.com/Login.aspx?acc=RT22574" target="_blank">Make a Payment</a>
 
 <h3>Pay your lease online by check or savings.*</h3>
 

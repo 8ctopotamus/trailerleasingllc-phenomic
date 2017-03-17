@@ -1,11 +1,11 @@
 ---
 title: Welcome
 layout: Homepage
-hero: ../assets/header.png
+hero: assets/header.png
 ---
 
 <a class="floatRight" href="/application">
-  <img src="../assets/apply-now.jpg" alt="Apply now" />
+  <img src="assets/apply-now.jpg" alt="Apply now" />
 </a>
 
 Welcome to the Trailer Leasing website. We created our website to be user-friendly for our customers and informative for anyone interested in leasing a trailer.
