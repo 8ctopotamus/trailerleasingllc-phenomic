@@ -1,6 +1,6 @@
 ---
 title: Leasing Terms
-hero: ../assets/header.png
+hero: ../assets/header-1.jpg
 ---
 
 <img class="floatRight" src="../assets/trailer-open.jpg" alt="Trailer"/>

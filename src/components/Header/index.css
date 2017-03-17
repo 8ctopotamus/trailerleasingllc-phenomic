@@ -3,11 +3,11 @@
 }
 
 .header {
-  position: absolute;
-  /* stretch */
+  /*position: absolute;
   left: 0;
   right: 0;
-
+*/
+  background: var(--colorPrimaryDark);
   color: var(--colorNeutralLight);
 }
 

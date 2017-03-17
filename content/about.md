@@ -1,6 +1,6 @@
 ---
 title: About Us
-hero: ../assets/header.png
+hero: ../assets/header-1.jpg
 ---
 
 Trailer Leasing LLC provides lease financing for virtually all types of trailers. From landscaping to cargo trailers, we can provide a lease product that fits your needs. Simply select or order the trailer from your dealer, complete our lease application, and with approved credit, we will provide funding to the dealer.

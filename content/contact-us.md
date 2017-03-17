@@ -1,6 +1,6 @@
 ---
 title: Contact Us
-hero: ../assets/header.png
+hero: ../assets/header-2.jpg
 ---
 
 <img class="floatRight" src="../assets/trailer-horse.jpg" alt="Horse trailer">

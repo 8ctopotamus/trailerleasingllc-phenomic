@@ -1,7 +1,7 @@
 ---
 title: Welcome
 layout: Homepage
-hero: assets/header.png
+hero: assets/header-2.jpg
 ---
 
 <a class="floatRight" href="/application">
